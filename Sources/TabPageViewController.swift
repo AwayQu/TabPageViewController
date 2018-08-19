@@ -81,6 +81,10 @@ open class TabPageViewController: UIPageViewController {
         navigationController?.navigationBar.shadowImage = nil
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
     }
+    
+    open func updateCurrentIndex(_ index: Int, shouldScroll: Bool) {
+        self.tabView.updateCurrentIndex(index, shouldScroll: shouldScroll)
+    }
 }
 
 
