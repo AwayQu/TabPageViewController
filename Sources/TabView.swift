@@ -198,13 +198,15 @@ extension TabView {
 
      - parameter index: Next Index
      */
-    func updateCurrentIndex(_ index: Int, shouldScroll: Bool) {
+    func updateCurrentIndex(_ index: Int, shouldScroll: Bool, animated:Bool? = nil) {
         deselectVisibleCells()
 
         currentIndex = isInfinity ? index + pageTabItemsCount : index
 
+        let ani = animated ?? !isInfinity
+        
         let indexPath = IndexPath(item: currentIndex, section: 0)
-        moveCurrentBarView(indexPath, animated: !isInfinity, shouldScroll: shouldScroll)
+        moveCurrentBarView(indexPath, animated: ani, shouldScroll: shouldScroll)
     }
 
     /**

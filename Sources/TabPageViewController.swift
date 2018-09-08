@@ -110,7 +110,7 @@ public extension TabPageViewController {
             completion: completion)
 
         guard isViewLoaded else { return }
-        tabView.updateCurrentIndex(index, shouldScroll: true)
+        tabView.updateCurrentIndex(index, shouldScroll: true, animated: animated)
     }
 }
 
