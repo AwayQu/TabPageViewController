@@ -77,9 +77,10 @@ open class TabPageViewController: UIPageViewController {
 
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
-        navigationController?.navigationBar.shadowImage = nil
-        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        // TODO
+//        return
+//        navigationController?.navigationBar.shadowImage = nil
+//        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
     }
     
     open func updateCurrentIndex(_ index: Int, shouldScroll: Bool) {
@@ -143,11 +144,13 @@ extension TabPageViewController {
      */
 
     fileprivate func updateNavigationBar() {
-        if let navigationBar = navigationController?.navigationBar {
-            navigationBar.shadowImage = UIImage()
-            navigationBar.setBackgroundImage(option.tabBackgroundImage, for: .default)
-            navigationBar.isTranslucent = option.isTranslucent
-        }
+//        // TODO
+//        return
+//        if let navigationBar = navigationController?.navigationBar {
+//            navigationBar.shadowImage = UIImage()
+//            navigationBar.setBackgroundImage(option.tabBackgroundImage, for: .default)
+//            navigationBar.isTranslucent = option.isTranslucent
+//        }
     }
 
     fileprivate func configuredTabView() -> TabView {
